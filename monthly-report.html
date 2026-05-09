@@ -5,41 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PulseMetrics | Rhythm Report</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <nav class="navbar">
-            <div class="logo">❤️‍🔥 PulseMetrics | BI Dashboard</div>
-            <div class="nav-links">
-                <a href="index.html">🏠 Pulse Home</a>
-                <a href="monthly-report.html" class="active">📅 Rhythm Report</a>
-                <a href="products.html">🏷️ Product Pulse</a>
-                <a href="insights.html">💡 Signal Insights</a>
+    <div class="bg-grid"></div>
+    <div class="layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-logo">
+                <div class="logo-hex">⬡</div>
+                <div>
+                    <div class="logo-title">PulseMetrics</div>
+                    <div class="logo-sub">BI Intelligence Suite</div>
+                </div>
             </div>
-        </nav>
+            <nav class="sidebar-nav">
+                <div class="nav-section-label">ANALYTICS</div>
+                <a href="index.html" class="nav-item"><span class="nav-icon">⊞</span><span class="nav-text">Command Center</span></a>
+                <a href="monthly-report.html" class="nav-item active"><span class="nav-icon">⊟</span><span class="nav-text">Rhythm Report</span></a>
+                <a href="products.html" class="nav-item"><span class="nav-icon">⊠</span><span class="nav-text">Product Pulse</span></a>
+                <a href="insights.html" class="nav-item"><span class="nav-icon">◬</span><span class="nav-text">Signal Insights</span></a>
+                <div class="nav-section-label" style="margin-top:20px">INFO</div>
+                <div class="sidebar-stat"><div class="ss-label">Data Range</div><div class="ss-val">Jan – Apr 2024</div></div>
+                <div class="sidebar-stat"><div class="ss-label">Currency</div><div class="ss-val">INR (₹)</div></div>
+            </nav>
+            <div class="sidebar-profile">
+                <div class="profile-avatar">DA</div>
+                <div class="profile-info"><div class="profile-name">Data Analyst</div><div class="profile-role">BI Developer · Portfolio</div></div>
+                <div class="online-dot"></div>
+            </div>
+        </aside>
 
-        <h1>📅 Monthly Rhythm Report</h1>
-        <p class="subtitle">Detailed breakdown of sales pulse by month</p>
+        <main class="main">
+            <header class="topbar">
+                <div class="topbar-left">
+                    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+                    <div>
+                        <h1 class="page-heading">Rhythm Report</h1>
+                        <p class="page-sub">Monthly Sales Breakdown · ₹ INR</p>
+                    </div>
+                </div>
+                <div class="topbar-right">
+                    <div class="live-indicator"><span class="pulse-ring"></span><span class="pulse-core"></span>Live</div>
+                    <div class="clock" id="clock">--:--:--</div>
+                </div>
+            </header>
 
-        <div class="card">
-            <table class="data-table" id="monthlyTable">
-                <thead>
-                    <tr><th>Month</th><th>Revenue Pulse ($)</th><th>Order Frequency</th><th>Avg Order Value</th><th>Growth Signal</th></tr>
-                </thead>
-                <tbody id="monthlyTableBody"></tbody>
-            </table>
-        </div>
+            <!-- Month Summary Cards -->
+            <section class="month-cards" id="monthCards"></section>
 
-        <div class="card">
-            <h2>📊 Monthly Pulse Comparison</h2>
-            <div class="bar-chart" id="comparisonChart"></div>
-        </div>
+            <!-- Table -->
+            <div class="panel">
+                <div class="panel-hd">
+                    <div>
+                        <div class="panel-title">Month-by-Month Breakdown</div>
+                        <div class="panel-sub">Revenue, Orders & Growth Signal</div>
+                    </div>
+                    <div class="panel-badge">₹ INR</div>
+                </div>
+                <div class="table-wrap">
+                    <table class="data-table" id="monthlyTable">
+                        <thead>
+                            <tr>
+                                <th>Month</th>
+                                <th>Revenue (₹)</th>
+                                <th>Orders</th>
+                                <th>Avg Value (₹)</th>
+                                <th>MoM Growth</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="monthlyTableBody"></tbody>
+                    </table>
+                </div>
+            </div>
 
-        <div class="nav-buttons">
-            <a href="index.html" class="btn">← Back to Pulse Home</a>
-        </div>
+            <!-- Comparison Chart -->
+            <div class="panel">
+                <div class="panel-hd">
+                    <div class="panel-title">📊 Monthly Pulse Comparison</div>
+                    <div class="panel-sub">Revenue bar chart · ₹</div>
+                </div>
+                <div class="bar-chart-container" id="comparisonChart"></div>
+            </div>
 
-        <footer class="footer">📡 PulseMetrics | Rhythm Report | April 2026</footer>
+            <div class="nav-buttons">
+                <a href="index.html" class="btn-back">← Command Center</a>
+            </div>
+            <footer class="footer"><span>⬡ PulseMetrics v2.0</span><span>· Rhythm Report · Jan–Apr 2024</span></footer>
+        </main>
     </div>
     <script src="script.js"></script>
 </body>
