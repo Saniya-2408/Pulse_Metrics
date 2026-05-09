@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PulseMetrics | Signal Insights</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="bg-grid"></div>
+    <div class="layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-logo">
+                <div class="logo-hex">⬡</div>
+                <div>
+                    <div class="logo-title">PulseMetrics</div>
+                    <div class="logo-sub">BI Intelligence Suite</div>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="nav-section-label">ANALYTICS</div>
+                <a href="index.html" class="nav-item"><span class="nav-icon">⊞</span><span class="nav-text">Command Center</span></a>
+                <a href="monthly-report.html" class="nav-item"><span class="nav-icon">⊟</span><span class="nav-text">Rhythm Report</span></a>
+                <a href="products.html" class="nav-item"><span class="nav-icon">⊠</span><span class="nav-text">Product Pulse</span></a>
+                <a href="insights.html" class="nav-item active"><span class="nav-icon">◬</span><span class="nav-text">Signal Insights</span></a>
+                <div class="nav-section-label" style="margin-top:20px">INFO</div>
+                <div class="sidebar-stat"><div class="ss-label">Data Range</div><div class="ss-val">Jan – Apr 2024</div></div>
+                <div class="sidebar-stat"><div class="ss-label">Currency</div><div class="ss-val">INR (₹)</div></div>
+            </nav>
+            <div class="sidebar-profile">
+                <div class="profile-avatar">DA</div>
+                <div class="profile-info"><div class="profile-name">Data Analyst</div><div class="profile-role">BI Developer · Portfolio</div></div>
+                <div class="online-dot"></div>
+            </div>
+        </aside>
+
+        <main class="main">
+            <header class="topbar">
+                <div class="topbar-left">
+                    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+                    <div>
+                        <h1 class="page-heading">Signal Insights</h1>
+                        <p class="page-sub">Data-Driven Intelligence · AI Recommendations</p>
+                    </div>
+                </div>
+                <div class="topbar-right">
+                    <div class="live-indicator"><span class="pulse-ring"></span><span class="pulse-core"></span>Live</div>
+                    <div class="clock" id="clock">--:--:--</div>
+                </div>
+            </header>
+
+            <!-- Insights Grid -->
+            <section class="insights-grid">
+                <div class="insight-card ic-cyan">
+                    <div class="ic-header">
+                        <div class="ic-icon">📈</div>
+                        <div class="ic-tag">Signal: STRONG</div>
+                    </div>
+                    <h3>Peak Performance Month</h3>
+                    <p>April recorded the highest revenue pulse at <strong>₹2,09,650</strong>, a <strong>178% surge</strong> vs March's low signal.</p>
+                    <div class="ic-metric">
+                        <div class="ic-metric-val">₹2,09,650</div>
+                        <div class="ic-metric-bar"><div style="width:100%" class="ic-bar-fill cyan-bg"></div></div>
+                    </div>
+                    <div class="ic-action">✅ Replicate April's strategy in Q3 & Q4 to sustain growth momentum.</div>
+                </div>
+
+                <div class="insight-card ic-green">
+                    <div class="ic-header">
+                        <div class="ic-icon">🏆</div>
+                        <div class="ic-tag">Signal: DOMINANT</div>
+                    </div>
+                    <h3>Electronics Category Leader</h3>
+                    <p>Electronics drives <strong>66%</strong> of total revenue. MacBook Pro alone contributes <strong>34%</strong> of all sales.</p>
+                    <div class="ic-metric">
+                        <div class="ic-metric-val">66% Share</div>
+                        <div class="ic-metric-bar"><div style="width:66%" class="ic-bar-fill green-bg"></div></div>
+                    </div>
+                    <div class="ic-action">✅ Bundle Electronics + Accessories to increase basket size by 15–20%.</div>
+                </div>
+
+                <div class="insight-card ic-amber">
+                    <div class="ic-header">
+                        <div class="ic-icon">⚠️</div>
+                        <div class="ic-tag">Signal: WEAK</div>
+                    </div>
+                    <h3>March Revenue Dip Alert</h3>
+                    <p>March dropped to <strong>₹75,537</strong> — weakest pulse in 4 months. Customer score also fell 2% simultaneously.</p>
+                    <div class="ic-metric">
+                        <div class="ic-metric-val">₹75,537</div>
+                        <div class="ic-metric-bar"><div style="width:36%" class="ic-bar-fill amber-bg"></div></div>
+                    </div>
+                    <div class="ic-action">⚡ Run win-back campaign in March. Investigate churn reasons via NPS survey.</div>
+                </div>
+
+                <div class="insight-card ic-violet">
+                    <div class="ic-header">
+                        <div class="ic-icon">🔮</div>
+                        <div class="ic-tag">Signal: PROJECTED</div>
+                    </div>
+                    <h3>Growth Projection Signal</h3>
+                    <p>At <strong>15% growth</strong>, projected total revenue hits <strong>₹5,98,750</strong>. Repeat customers are key driver.</p>
+                    <div class="ic-metric">
+                        <div class="ic-metric-val">₹5,98,750</div>
+                        <div class="ic-metric-bar"><div style="width:75%" class="ic-bar-fill violet-bg"></div></div>
+                    </div>
+                    <div class="ic-action">✅ Invest in loyalty programs and upsell pathways for 15%+ growth.</div>
+                </div>
+            </section>
+
+            <!-- Executive Summary -->
+            <div class="panel">
+                <div class="panel-hd">
+                    <div class="panel-title">📌 Executive Pulse Summary</div>
+                    <div class="panel-sub">Key metrics at a glance</div>
+                </div>
+                <div class="exec-grid">
+                    <div class="exec-item positive">
+                        <div class="exec-label">Total YTD Revenue</div>
+                        <div class="exec-val">₹5,20,650</div>
+                        <div class="exec-note">Jan–Apr 2024</div>
+                    </div>
+                    <div class="exec-item positive">
+                        <div class="exec-label">Avg Order Value</div>
+                        <div class="exec-val">₹4,098</div>
+                        <div class="exec-note">Per transaction</div>
+                    </div>
+                    <div class="exec-item warning">
+                        <div class="exec-label">Weak Signal Month</div>
+                        <div class="exec-val">March</div>
+                        <div class="exec-note">Needs intervention</div>
+                    </div>
+                    <div class="exec-item positive">
+                        <div class="exec-label">Best Month</div>
+                        <div class="exec-val">April</div>
+                        <div class="exec-note">₹2,09,650 revenue</div>
+                    </div>
+                    <div class="exec-item positive">
+                        <div class="exec-label">Top SKU</div>
+                        <div class="exec-val">MacBook Pro</div>
+                        <div class="exec-note">34% contribution</div>
+                    </div>
+                    <div class="exec-item positive">
+                        <div class="exec-label">15% Growth Target</div>
+                        <div class="exec-val">₹5,98,750</div>
+                        <div class="exec-note">Projected revenue</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Banner -->
+            <div class="skills-banner">
+                <div class="skills-title">🛠 Built with</div>
+                <div class="skills-chips">
+                    <span class="chip">SQL</span>
+                    <span class="chip">Power BI</span>
+                    <span class="chip">Python</span>
+                    <span class="chip">DAX</span>
+                    <span class="chip">Excel</span>
+                    <span class="chip">Tableau</span>
+                    <span class="chip">JavaScript</span>
+                    <span class="chip">Data Modeling</span>
+                </div>
+            </div>
+
+            <div class="nav-buttons">
+                <a href="index.html" class="btn-back">← Command Center</a>
+            </div>
+            <footer class="footer"><span>⬡ PulseMetrics v2.0</span><span>· Signal Insights · AI-Generated Recommendations</span></footer>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
