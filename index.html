@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PulseMetrics | Command Center</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="bg-grid"></div>
+
+    <div class="layout">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-logo">
+                <div class="logo-hex">⬡</div>
+                <div>
+                    <div class="logo-title">PulseMetrics</div>
+                    <div class="logo-sub">BI Intelligence Suite</div>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="nav-section-label">ANALYTICS</div>
+                <a href="index.html" class="nav-item active">
+                    <span class="nav-icon">⊞</span>
+                    <span class="nav-text">Command Center</span>
+                    <span class="live-badge">Live</span>
+                </a>
+                <a href="monthly-report.html" class="nav-item">
+                    <span class="nav-icon">⊟</span>
+                    <span class="nav-text">Rhythm Report</span>
+                </a>
+                <a href="products.html" class="nav-item">
+                    <span class="nav-icon">⊠</span>
+                    <span class="nav-text">Product Pulse</span>
+                </a>
+                <a href="insights.html" class="nav-item">
+                    <span class="nav-icon">◬</span>
+                    <span class="nav-text">Signal Insights</span>
+                </a>
+                <div class="nav-section-label" style="margin-top:20px">INFO</div>
+                <div class="sidebar-stat">
+                    <div class="ss-label">Data Range</div>
+                    <div class="ss-val">Jan – Apr 2024</div>
+                </div>
+                <div class="sidebar-stat">
+                    <div class="ss-label">Currency</div>
+                    <div class="ss-val">INR (₹)</div>
+                </div>
+            </nav>
+            <div class="sidebar-profile">
+                <div class="profile-avatar">DA</div>
+                <div class="profile-info">
+                    <div class="profile-name">Data Analyst</div>
+                    <div class="profile-role">BI Developer · Portfolio</div>
+                </div>
+                <div class="online-dot"></div>
+            </div>
+        </aside>
+
+        <!-- Main -->
+        <main class="main">
+            <!-- Topbar -->
+            <header class="topbar">
+                <div class="topbar-left">
+                    <button class="hamburger" id="hamburger">
+                        <span></span><span></span><span></span>
+                    </button>
+                    <div>
+                        <h1 class="page-heading">Command Center</h1>
+                        <p class="page-sub">Sales Intelligence Dashboard</p>
+                    </div>
+                </div>
+                <div class="topbar-right">
+                    <div class="live-indicator">
+                        <span class="pulse-ring"></span>
+                        <span class="pulse-core"></span>
+                        Live
+                    </div>
+                    <div class="clock" id="clock">--:--:--</div>
+                </div>
+            </header>
+
+            <!-- KPI Section -->
+            <section class="kpi-grid">
+                <div class="kpi-card cyan">
+                    <div class="kpi-label">Total Revenue</div>
+                    <div class="kpi-value" id="totalSales">₹0</div>
+                    <div class="kpi-spark" id="spk1"></div>
+                    <div class="kpi-trend positive">▲ 12% vs last cycle</div>
+                </div>
+                <div class="kpi-card green">
+                    <div class="kpi-label">Order Frequency</div>
+                    <div class="kpi-value" id="totalOrders">0</div>
+                    <div class="kpi-spark" id="spk2"></div>
+                    <div class="kpi-trend positive">▲ 8% vs last cycle</div>
+                </div>
+                <div class="kpi-card amber">
+                    <div class="kpi-label">Avg Order Value</div>
+                    <div class="kpi-value" id="avgOrder">₹0</div>
+                    <div class="kpi-spark" id="spk3"></div>
+                    <div class="kpi-trend positive">▲ 4% vs last cycle</div>
+                </div>
+                <div class="kpi-card violet">
+                    <div class="kpi-label">Customer Score</div>
+                    <div class="kpi-value">4.8 ★</div>
+                    <div class="kpi-spark" id="spk4"></div>
+                    <div class="kpi-trend negative">▼ 2% vs last cycle</div>
+                </div>
+            </section>
+
+            <!-- Charts -->
+            <section class="charts-row">
+                <div class="panel flex-2">
+                    <div class="panel-hd">
+                        <div>
+                            <div class="panel-title">Monthly Revenue Pulse</div>
+                            <div class="panel-sub">₹ Revenue by month</div>
+                        </div>
+                        <div class="panel-badge">Bar Chart</div>
+                    </div>
+                    <div class="bar-chart-container" id="barChart"></div>
+                </div>
+                <div class="panel flex-1">
+                    <div class="panel-hd">
+                        <div>
+                            <div class="panel-title">Category Split</div>
+                            <div class="panel-sub">Revenue distribution</div>
+                        </div>
+                    </div>
+                    <div class="donut-area">
+                        <svg viewBox="0 0 200 200" class="donut-svg" id="donutSvg"></svg>
+                        <div class="donut-center-text">
+                            <div class="donut-pct">100%</div>
+                            <div class="donut-lbl">Revenue</div>
+                        </div>
+                    </div>
+                    <div class="donut-legend" id="donutLegend"></div>
+                </div>
+            </section>
+
+            <!-- Filter + Projector -->
+            <section class="two-col">
+                <div class="panel">
+                    <div class="panel-hd">
+                        <div class="panel-title">🎯 Pulse Filter</div>
+                    </div>
+                    <div class="filter-tabs" id="filterTabs">
+                        <button class="ftab active" data-val="all">All Months</button>
+                        <button class="ftab" data-val="Jan">Jan</button>
+                        <button class="ftab" data-val="Feb">Feb</button>
+                        <button class="ftab" data-val="Mar">Mar</button>
+                        <button class="ftab" data-val="Apr">Apr</button>
+                    </div>
+                    <div class="filter-cards" id="filterResult">
+                        <div class="fc"><div class="fc-label">Period</div><div class="fc-val" id="frPeriod">All Months</div></div>
+                        <div class="fc cyan"><div class="fc-label">Revenue</div><div class="fc-val" id="frRevenue">₹64,000</div></div>
+                        <div class="fc green"><div class="fc-label">Orders</div><div class="fc-val" id="frOrders">127</div></div>
+                        <div class="fc amber"><div class="fc-label">Avg Value</div><div class="fc-val" id="frAvg">₹504</div></div>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-hd">
+                        <div class="panel-title">🔮 Pulse Projector</div>
+                    </div>
+                    <div class="slider-section">
+                        <div class="slider-meta">
+                            Growth Scenario &nbsp;<span class="slider-pct" id="growthPercent">15</span>%
+                        </div>
+                        <input type="range" id="growthSlider" min="0" max="100" value="15" class="custom-slider">
+                        <div class="slider-marks">
+                            <span>0%</span><span>25%</span><span>50%</span><span>75%</span><span>100%</span>
+                        </div>
+                    </div>
+                    <div class="projection-box">
+                        <div class="proj-inner">
+                            <div class="proj-label">Projected Revenue</div>
+                            <div class="proj-amount" id="projectedAmount">₹73,600</div>
+                            <div class="proj-delta" id="projDelta">▲ +₹9,600 uplift</div>
+                        </div>
+                        <div class="proj-gauge" id="projGauge">
+                            <svg viewBox="0 0 100 55" class="gauge-svg" id="gaugeSvg"></svg>
+                            <div class="gauge-val" id="gaugeVal">15%</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <span>⬡ PulseMetrics v2.0</span>
+                <span>· Jan–Apr 2024 ·</span>
+                <span>Built for BI & Data Analytics Portfolio</span>
+            </footer>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
