@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PulseMetrics | Rhythm Report</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo">❤️‍🔥 PulseMetrics | BI Dashboard</div>
+            <div class="nav-links">
+                <a href="index.html">🏠 Pulse Home</a>
+                <a href="monthly-report.html" class="active">📅 Rhythm Report</a>
+                <a href="products.html">🏷️ Product Pulse</a>
+                <a href="insights.html">💡 Signal Insights</a>
+            </div>
+        </nav>
+
+        <h1>📅 Monthly Rhythm Report</h1>
+        <p class="subtitle">Detailed breakdown of sales pulse by month</p>
+
+        <div class="card">
+            <table class="data-table" id="monthlyTable">
+                <thead>
+                    <tr><th>Month</th><th>Revenue Pulse ($)</th><th>Order Frequency</th><th>Avg Order Value</th><th>Growth Signal</th></tr>
+                </thead>
+                <tbody id="monthlyTableBody"></tbody>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>📊 Monthly Pulse Comparison</h2>
+            <div class="bar-chart" id="comparisonChart"></div>
+        </div>
+
+        <div class="nav-buttons">
+            <a href="index.html" class="btn">← Back to Pulse Home</a>
+        </div>
+
+        <footer class="footer">📡 PulseMetrics | Rhythm Report | April 2026</footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
